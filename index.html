@@ -90,15 +90,20 @@ data-aos-delay="0"
 <div class="p-6">
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Python</span>
-<span class="inline-block bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-3 py-1 text-sm font-medium">Scrapy</span>
-<span class="inline-block bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-3 py-1 text-sm font-medium">Docker</span>
-<span class="inline-block bg-rose-50 text-rose-700 border border-rose-200 rounded-full px-3 py-1 text-sm font-medium">ETL</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Scrapy</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Docker</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Airflow</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">ETL</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Pipelines</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">CI/CD</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">DevOps</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
 </div>
 <h3 class="font-bold text-xl mb-2 text-gray-900 flex items-center gap-2">
 <i class="fab fa-github text-gray-700"></i>
                              VDAB Job Scraper
 </h3>
-<p class="text-gray-600 text-base">A web scraper built with Scrapy to extract job postings from the VDAB REST API, with configurations for development and production.</p>
+<p class="text-gray-600 text-base">This project implements a robust web crawling solution. It features automatic retry and connection drop handling, respecting server load with throttling. Data is reliably stored in a partitioned Bronze Layer with failure tracking for debugging. Critical issues trigger Slack notifications. The entire system is containerized with a custom Docker image and managed by a streamlined CI/CD pipeline for efficient deployment and operation on my Airflow Home server.</p>
 </div>
 </div>
 </a>
@@ -112,17 +117,23 @@ data-aos-delay="200"
 <img src="./assets/airflow-home-server.png" alt="Airflow Home Server" class="w-full h-48 object-cover">
 <div class="p-6">
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="inline-block bg-cyan-50 text-cyan-700 border border-cyan-200 rounded-full px-3 py-1 text-sm font-medium">Apache Airflow</span>
-<span class="inline-block bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-3 py-1 text-sm font-medium">Docker</span>
-<span class="inline-block bg-slate-50 text-slate-700 border border-slate-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
-<span class="inline-block bg-red-50 text-red-700 border border-red-200 rounded-full px-3 py-1 text-sm font-medium">PostgreSQL</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Airflow</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">ETL</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Pipelines</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Docker</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">DevOps</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">PostgreSQL</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">CI/CD</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">VM</span>
+
 
 </div>
 <h3 class="font-bold text-xl mb-2 text-gray-900 flex items-center gap-2">
 <i class="fab fa-github text-gray-700"></i>
                             Airflow Home Server
 </h3>
-<p class="text-gray-600 text-base">A project detailing the setup of Apache Airflow on a home server using Docker, including important installation notes.</p>
+<p class="text-gray-600 text-base">Leveraging Airflow on a dedicated Docker VM within Proxmox, I orchestrate dynamic data pipelines. My robust setup, incorporating Docker-out-of-Docker (DooD) for seamless container management and avoiding Docker-in-Docker complexities as advised by industry experts, ensures efficient data ingestion and ETL. This architecture, integrated with Proxmox's scheduled backups, guarantees a stable and resilient data processing environment for my home projects.</p>
 </div>
 </div>
 </a>
@@ -137,14 +148,22 @@ data-aos-delay="400"
 <div class="p-6">
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Python</span>
-<span class="inline-block bg-orange-50 text-orange-700 border border-orange-200 rounded-full px-3 py-1 text-sm font-medium">Streamlit</span>
-<span class="inline-block bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-3 py-1 text-sm font-medium">Docker</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Streamlit</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Docker</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">DevOps</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">AWS Cloud</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LangSmith</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LangGraph</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LangChain</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LLM</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Agents</span>
 </div>
 <h3 class="font-bold text-xl mb-2 text-gray-900 flex items-center gap-2">
 <i class="fab fa-github text-gray-700"></i>
                             Chat with TIA
 </h3>
-<p class="text-gray-600 text-base">A multi-agent chatbot system designed to interact with API data to generate specific reports and charts.</p>
+<p class="text-gray-600 text-base">This multi-agent chatbot system leverages a supervisor agent pattern with nested ReAct agents (Researcher, Reporter, Chart Generator) to empower project managers. By interacting with project data via the API, it generates customized reports and charts providing answers even for niche questions. Built with LangGraph and LangSmith for traceability, this solution streamlines project insights and allows fast feedback to the client.</p>
 </div>
 </div>
 </a>
@@ -159,15 +178,18 @@ data-aos-delay="0"
 <div class="p-6">
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Python</span>
-<span class="inline-block bg-orange-50 text-orange-700 border border-orange-200 rounded-full px-3 py-1 text-sm font-medium">Streamlit</span>
-<span class="inline-block bg-amber-50 text-amber-700 border border-amber-200 rounded-full px-3 py-1 text-sm font-medium">AWS Bedrock</span>
-<span class="inline-block bg-slate-50 text-slate-700 border border-slate-200 rounded-full px-3 py-1 text-sm font-medium">AWS EC2</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Streamlit</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">RAG</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LLM</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">AWS Cloud</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Elastic Search</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
 </div>
 <h3 class="font-bold text-xl mb-2 text-gray-900 flex items-center gap-2">
 <i class="fab fa-github text-gray-700"></i>
                             AWS Knowledge Base Demo
 </h3>
-<p class="text-gray-600 text-base">A Streamlit app that uses an EC2 instance to interface with an AWS Bedrock knowledge base via secure access links.</p>
+<p class="text-gray-600 text-base">This project showcases a scalable RAG (Retrieval Augmented Generation) demo using AWS Bedrock. It features a Streamlit application deployed on EC2, designed for rapid setup and customer demonstrations. A key innovation is the efficient use of OpenSearch as a combined vector store with intelligent filtering, significantly reducing operational costs. The solution also incorporates secure access links via public/private key encryption, simplifying sharing while maintaining data privacy for diverse knowledge bases, including web data and S3 content.</p>
 </div>
 </div>
 </a>
@@ -181,13 +203,18 @@ data-aos-delay="200"
 <img src="./assets/search-web.png" alt="Ask Website" class="w-full h-48 object-cover">
 <div class="p-6">
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="inline-block bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-full px-3 py-1 text-sm font-medium">Mermaid</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LangGraph</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LangSmith</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Python</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">LLM</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Agents</span>
 </div>
 <h3 class="font-bold text-xl mb-2 text-gray-900 flex items-center gap-2">
 <i class="fab fa-github text-gray-700"></i>
-                            Ask Website
+                            Deep Search
 </h3>
-<p class="text-gray-600 text-base">A project outlining a data extraction and processing workflow visualized with a Mermaid diagram.</p>
+<p class="text-gray-600 text-base">I wrote this script before Deep Research was released. Is is aa experimental AI agent implements a novel deep search concept for web exploration. Employing a self-calling architecture with a dynamic scratchpad, it iteratively refines answers by intelligently ranking URLs and progressively building knowledge. The agent leverages AI for structured content analysis, confidence scoring, and adaptive thresholds, demonstrating a cutting-edge approach to comprehensive and accurate web-based question answering, ideal for complex information retrieval.</p>
 </div>
 </div>
 </a>
@@ -202,14 +229,16 @@ data-aos-delay="400"
 <div class="p-6">
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Python</span>
-<span class="inline-block bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-3 py-1 text-sm font-medium">Scrapy</span>
-<span class="inline-block bg-green-50 text-green-700 border border-green-200 rounded-full px-3 py-1 text-sm font-medium">Playwright</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Scrapy</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Playwright</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Selenium</span>
+<span class="inline-block bg-blue-50 text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-sm font-medium">Linux</span>
 </div>
 <h3 class="font-bold text-xl mb-2 text-gray-900 flex items-center gap-2">
 <i class="fab fa-github text-gray-700"></i>
                             Scrapy Playwright Demo
 </h3>
-<p class="text-gray-600 text-base">Demonstrates using Playwright within a Scrapy spider to crawl websites by logging into Reddit.</p>
+<p class="text-gray-600 text-base">This project merges Scrapy's robust crawling with Playwright's modern browser automation for advanced web scraping. It demonstrates logging into 2dehands.be to extract user-saved searches, showcasing the scraping of dynamic, JavaScript-heavy websites. I make a compelling case for choosing Playwright's streamlined approach which is more developer-friendly and has a simple syntax, offering a more compelling alternative to traditional Selenium-based methods for efficient data extraction.</p>
 </div>
 </div>
 </a>
