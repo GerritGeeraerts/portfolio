@@ -447,62 +447,33 @@ anchorPlacement: 'top-bottom', // defines which position of the element regardin
 function initShineAnimation() {
   const projectCards = document.querySelectorAll('[data-aos="fade-up"]');
   
-  // Intersection Observer to track visible cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible-card');
-      } else {
-        entry.target.classList.remove('visible-card');
-      }
-    });
-  }, {
-    threshold: 0.1, // Card is considered visible when 10% is shown
-    rootMargin: '0px 0px -50px 0px' // Slight offset from bottom
-  });
-
-  // Observe all project cards
+  // Add hover event listeners to each card
   projectCards.forEach(card => {
-    observer.observe(card);
-  });
-
-  // Function to apply shine animation to a random visible card
-  function applyShineToRandomCard() {
-    const visibleCards = document.querySelectorAll('.visible-card');
-    
-    if (visibleCards.length === 0) return;
-    
-    // Remove any existing shine animations
-    projectCards.forEach(card => {
-      const cardElement = card.querySelector('div');
-      if (cardElement) {
-        cardElement.classList.remove('shine-animation');
-      }
-    });
-    
-    // Select a random visible card
-    const randomIndex = Math.floor(Math.random() * visibleCards.length);
-    const selectedCard = visibleCards[randomIndex];
-    const cardElement = selectedCard.querySelector('div');
+    const cardElement = card.querySelector('div');
     
     if (cardElement) {
-      cardElement.classList.add('shine-animation');
+      // Add hover event listeners
+      card.addEventListener('mouseenter', () => {
+        // Remove any existing shine animations from all cards
+        projectCards.forEach(otherCard => {
+          const otherCardElement = otherCard.querySelector('div');
+          if (otherCardElement) {
+            otherCardElement.classList.remove('shine-animation');
+          }
+        });
+        
+        // Add shine animation to the hovered card
+        cardElement.classList.add('shine-animation');
+      });
       
-      // Remove the animation class after animation completes
-      setTimeout(() => {
-        cardElement.classList.remove('shine-animation');
-      }, 1500); // Match the animation duration
+      card.addEventListener('mouseleave', () => {
+        // Remove shine animation when mouse leaves after animation completes
+        setTimeout(() => {
+          cardElement.classList.remove('shine-animation');
+        }, 1500); // Allow animation to complete
+      });
     }
-  }
-
-  // Start the shine animation cycle
-  function startShineAnimation() {
-    applyShineToRandomCard();
-    setInterval(applyShineToRandomCard, 5000); // Every 10 seconds
-  }
-
-  // Start after a short delay to ensure all cards are loaded
-  setTimeout(startShineAnimation, 2000);
+  });
 }
 
 // Initialize shine animation when DOM is loaded
